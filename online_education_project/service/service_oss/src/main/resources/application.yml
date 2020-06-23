@@ -1,0 +1,32 @@
+server:
+  port: 8002
+
+
+spring:
+  application:
+    name: service-oss-8002
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  redis:
+    host: 39.96.41.66
+    port: 6379
+    timeout: 1800000
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+
+
+aliyun:
+  oss:
+    endPoint: oss-cn-shenzhen.aliyuncs.com
+    bucketName: online-education-project
+    bucketDomain: https://online-education-project.oss-cn-shenzhen.aliyuncs.com
+    accessKeyId: LTAI4FsjFUENH4wsNC8Ekgib
+    accessKeySecret: oaiKUWKNuWvAWVMEiaGBTiOgygZea8
